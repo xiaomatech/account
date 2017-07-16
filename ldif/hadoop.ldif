@@ -1,0 +1,168 @@
+version: 1
+
+dn: dc=meizu,dc=mz
+dc: meizu
+o: meizu,Inc.
+objectclass: dcObject
+objectclass: organization
+objectclass: top
+
+dn: ou=Control,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: Control
+
+dn: cn=kdc-adm,ou=Control,dc=meizu,dc=mz
+cn: kdc-adm
+objectclass: simpleSecurityObject
+objectclass: organizationalRole
+objectclass: top
+
+dn: cn=kdc-srv,ou=Control,dc=meizu,dc=mz
+cn: kdc-srv
+objectclass: simpleSecurityObject
+objectclass: organizationalRole
+objectclass: top
+
+dn: cn=Manager,ou=Control,dc=meizu,dc=mz
+cn: Manager
+objectclass: simpleSecurityObject
+objectclass: organizationalRole
+objectclass: top
+userpassword: {SSHA}gktC2eX9iOnAqtbSkye8i/vhsHRLbSJ3
+
+dn: ou=Group,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: Group
+
+dn: cn=hbase,ou=Group,dc=meizu,dc=mz
+cn: hbase
+gidnumber: 1005
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=hdfs,ou=Group,dc=meizu,dc=mz
+cn: hdfs
+gidnumber: 1001
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=hive,ou=Group,dc=meizu,dc=mz
+cn: hive
+gidnumber: 1004
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=mapred,ou=Group,dc=meizu,dc=mz
+cn: mapred
+gidnumber: 1003
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=spark,ou=Group,dc=meizu,dc=mz
+cn: spark
+gidnumber: 1006
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=yarn,ou=Group,dc=meizu,dc=mz
+cn: yarn
+gidnumber: 1002
+objectclass: posixGroup
+objectclass: top
+
+dn: ou=Kerberos,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: Kerberos
+
+dn: ou=People,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: People
+
+
+dn: uid=hdfs,ou=People,dc=meizu,dc=mz
+cn: hdfs
+gidnumber: 1001
+homedirectory: /home/hdfs
+loginshell: /bin/bash
+objectclass: person
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: top
+sn: hdfs
+uid: hdfs
+uidnumber: 1001
+
+dn: uid=yarn,ou=People,dc=meizu,dc=mz
+cn: yarn
+gidnumber: 1002
+homedirectory: /home/yarn
+loginshell: /bin/bash
+objectclass: person
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: top
+sn: yarn
+uid: yarn
+uidnumber: 1002
+
+dn: uid=mapred,ou=People,dc=meizu,dc=mz
+cn: mapred
+gidnumber: 1003
+homedirectory: /home/mapred
+loginshell: /bin/bash
+objectclass: person
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: top
+sn: mapred
+uid: mapred
+uidnumber: 1003
+
+dn: uid=hive,ou=People,dc=meizu,dc=mz
+cn: hive
+gidnumber: 1004
+homedirectory: /home/hive
+loginshell: /bin/bash
+objectclass: person
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: top
+sn: hive
+uid: hive
+uidnumber: 1004
+
+dn: uid=hbase,ou=People,dc=meizu,dc=mz
+cn: hbase
+gidnumber: 1005
+homedirectory: /home/hbase
+loginshell: /bin/bash
+objectclass: person
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: top
+sn: hbase
+uid: hbase
+uidnumber: 1005
+
+dn: uid=spark,ou=People,dc=meizu,dc=mz
+cn: spark
+gidnumber: 1006
+homedirectory: /home/spark
+loginshell: /bin/bash
+objectclass: person
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: top
+sn: spark
+uid: spark
+uidnumber: 1006

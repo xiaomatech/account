@@ -1,5 +1,4 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 e457e536
 dn: cn={5}samba
 objectClass: olcSchemaConfig
 cn: {5}samba

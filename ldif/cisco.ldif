@@ -1,5 +1,4 @@
 # AUTO-GENERATED FILE - DO NOT EDIT !! Use ldapmodify.
-# CRC32 bc108cba
 dn: cn={4}cisco
 objectClass: olcSchemaConfig
 cn: {4}cisco
@@ -39,7 +38,6 @@ olcAttributeTypes: {8}( 1.3.6.1.4.1.9.500.1.9 NAME 'CiscoGroupPolicy' DESC '
  Group policy for VPN users' EQUALITY caseIgnoreMatch ORDERING caseIgnoreOrd
  eringMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121
  .1.15{128} SINGLE-VALUE )
-# add by fuquanshi
 olcAttributeTypes: {9}( 1.3.6.1.4.1.9.500.1.10 NAME 'CiscoIPAddress2' DESC '
  Address for VPN user' EQUALITY caseIgnoreMatch ORDERING caseIgnoreOrderingM
  atch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{
