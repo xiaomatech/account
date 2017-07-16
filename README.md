@@ -1,3 +1,3 @@
 ```
-    yum install ipa-server bind-dyndb-ldap -y
+    全网统一账户实践 网络区/办公区/测试区/生产区 账号统一管理
 ```
