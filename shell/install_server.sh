@@ -2,6 +2,8 @@
 
 yum  install -y ipa-server bind-dyndb-ldap ipa-server-trust-ad ipa-server-dns ipa-admintools rng-tools authconfig
 
+yum install -y freeradius freeradius-utils freeradius-ldap freeradius-krb5
+
 yum localinstall -y rpm/*.rpm
 
 service iptables stop
@@ -17,7 +19,7 @@ ipa config-mod --defaultshell=/bin/bash
 
 #for replica
 ipa-replica-prepare idm2.meizu.mz
-scp /var/lib/ipa/replica-info-idm2.meizu.mz.gpg  root@idm2.meizu.mz:/root
+scp /var/lib/ipa/replica-info-idm2.meizu.mz.gpg  root@idm2.meizu.mz:/var/lib/ipa/
 
 
 #添加用户：
