@@ -1,0 +1,4 @@
+dn: ou=sudoers,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: sudoers
