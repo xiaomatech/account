@@ -9,7 +9,7 @@ chkconfig iptables off
 systemctl stop firewalld
 systemctl disable firewalld
 
-ipa-replica-install /var/lib/ipa/replica-info-idm2.meizu.mz.gpg --skip-conncheck
+ipa-replica-install /var/lib/ipa/replica-info-idm2.meizu.mz.gpg -U --setup-ca --setup-dns --no-forwarders --auto-reverse --no-ntp --skip-conncheck
 
 
 kinit admin

@@ -11,11 +11,25 @@ chkconfig iptables off
 systemctl stop firewalld
 systemctl disable firewalld
 
-ipa-server-install --domain=meizu.mz--realm=MEIZU.MZ --setup-dns --no-forwarders -U
+sed -i.orig  '/zone "\." IN/,+3 s/^/#/' /etc/named.conf
+
+service named restart
+
+ipa-server-install --domain=meizu.mz --realm=MEIZU.MZ --setup-dns --ssh-trust-dns --mkhomedir --no-forwarders -U \
+    --hostname=`hostname -f` --ip-address=10.3.140.42 --auto-reverse -a admin_password -p dir_admin_password
 
 kinit admin
 
 ipa config-mod --defaultshell=/bin/bash
+
+#Configure the reverse dns
+#ipa dnszone-add --allow-sync-ptr=true --dynamic-update=true zone
+
+#Configure dns forwards
+#ipa dnsforwardzone-add name --forwarder forwarder --forward-policy policy
+
+#Configure reverse entries
+#ipa dnsrecord-add zone entry --ptr-hostname hostname
 
 #for replica
 ipa-replica-prepare idm2.meizu.mz
