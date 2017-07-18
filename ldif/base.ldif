@@ -2,3 +2,27 @@ dn: ou=sudoers,dc=meizu,dc=mz
 objectclass: organizationalUnit
 objectclass: top
 ou: sudoers
+
+dn: ou=netzone,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: netzone
+
+dn: ou=idczone,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: idczone
+
+dn: ou=officezone,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: officezone
+
+
+dn: ou=testzone,dc=meizu,dc=mz
+objectclass: organizationalUnit
+objectclass: top
+ou: testzone
+
+
+

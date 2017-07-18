@@ -23,13 +23,13 @@ kinit admin
 ipa config-mod --defaultshell=/bin/bash
 
 #Configure the reverse dns
-#ipa dnszone-add --allow-sync-ptr=true --dynamic-update=true zone
+#ipa dnszone-add --allow-sync-ptr=true --dynamic-update=true meizu.mz
 
 #Configure dns forwards
 #ipa dnsforwardzone-add name --forwarder forwarder --forward-policy policy
 
 #Configure reverse entries
-#ipa dnsrecord-add zone entry --ptr-hostname hostname
+#ipa dnsrecord-add meizu.mz bbs.web01.gz.meizu.mz -a-rec 10.3.140.43
 
 #for replica
 ipa-replica-prepare idm2.meizu.mz
