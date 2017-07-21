@@ -219,12 +219,6 @@ objectclass: organizationalUnit
 objectclass: top
 ou: Kerberos
 
-dn: cn=MEIZU.COM,ou=Kerberos,dc=meizu,dc=mz
-cn: MEIZU.COM
-objectclass: top
-objectclass: krbRealmContainer
-objectclass: krbTicketPolicyAux
-
 dn: ou=People,dc=meizu,dc=mz
 objectclass: organizationalUnit
 objectclass: top
